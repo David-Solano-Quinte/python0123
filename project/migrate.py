@@ -42,7 +42,13 @@ table=""" CREATE TABLE INVENTARIO (
             FECHA_MOVIMIENTO TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         ); """
 cursor_obj.execute(table)
+cursor_obj.execute("DROP TABLE IF EXISTS CAMBIO")
 
+table = """CREATE TABLE CAMBIO (
+            SOLES INT NOT NULL,
+            DOLARES INT NOT NULL
+)"""
+cursor_obj.execute(table)
 # comentamos las insercciones ya que solo sera parte de la creacion de tablas
 """ insert =" INSERT INTO USUARIOS(USUARIO,PASSWORD,EMAIL,FULLNAME,SCORE,TIPOUSUARIO) VALUES('admin','admin','admin@datux.com','admin datux',0,'admin')"
 

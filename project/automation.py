@@ -8,7 +8,6 @@ message="""
 print(message)
 a=int(input('ingrese la tarea a realizar: '))
 
-
 def insertData():
     #obtiene la ruta absoluta
     path_=os.getcwd()+'\dataTienda.csv'
@@ -24,3 +23,11 @@ def insertData():
 def updateDolar():
     url = 'https://api.apis.net.pe/v1/tipo-cambio-sunat' #tipo cambio sunat
     pass
+try:
+    if a == 1:
+        insertData()
+except:
+    pass
+
+
+
